@@ -1,0 +1,11 @@
+certifi
+flask
+# Fix error "TypeError: 'unicode' does not have the buffer interface"
+# https://github.com/pallets/werkzeug/issues/537
+#Werkzeug==0.9.6
+#Werkzeug==0.11.5
+flask-Script
+flask-bootstrap
+flask-moment
+flask-wtf
+xlrd

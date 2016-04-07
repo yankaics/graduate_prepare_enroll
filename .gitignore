@@ -1,0 +1,6 @@
+# intellij idea project files
+.idea
+
+.DS_Store
+
+data.xlsx

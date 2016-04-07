@@ -1,0 +1,6 @@
+# python application for graduate_prepare_enroll
+app:
+    image: ynuae/graduate_prepare_enroll
+    ports:
+      - "50006:5000"
+    restart: always
