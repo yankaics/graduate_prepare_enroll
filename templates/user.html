@@ -13,16 +13,21 @@
                 </a>
             </p>
 
-            <table class="table table-responsive table-bordered">
+            <table class="table table-responsive table-hover table-condensed table-bordered" style="font-size: 1.2em;">
 
                 <caption>考生信息</caption>
 
                 {% for i in range(data.header.__len__()) %}
 
-                    {% if data.header[i] == "总分排名" %}
-                        <tr class="danger">
+                    {% if data.header[i] == "复试笔试成绩" %}
+                        <tr>
                             <th>{{ data.header[i] }}</th>
-                            <td>{{ data.data[i] }}</td>
+                            <td id="reexamination_write"><mark>{{ data.data[i] }}</mark></td>
+                        </tr>
+                    {% elif data.header[i] == "复试面试成绩" %}
+                        <tr>
+                            <th>{{ data.header[i] }}</th>
+                            <td id="reexamination_interview"><mark>{{ data.data[i] }}</mark></td>
                         </tr>
                     {% else %}
                         <tr>
@@ -49,6 +54,20 @@
         <div class="col-md-2 col-lg-2"></div>
     </div>
 
+{% endblock %}
 
-
+{% block scripts %}
+  {{super()}}
+  <script>
+  $(function() {
+    var $reexamination_write = $("#reexamination_write").text();
+    var $reexamination_interview = $("#reexamination_interview").text();
+    if($reexamination_write < 60) {
+        $("#reexamination_write").addClass("danger");
+    }
+    if($reexamination_interview < 60) {
+        $("#reexamination_interview").addClass("danger");
+    }
+  });
+  </script>
 {% endblock %}
