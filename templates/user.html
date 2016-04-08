@@ -29,6 +29,11 @@
                             <th>{{ data.header[i] }}</th>
                             <td id="reexamination_interview"><mark>{{ data.data[i] }}</mark></td>
                         </tr>
+                    {% elif i >= 7 %}
+                        <tr>
+                            <th>{{ data.header[i] }}</th>
+                            <td class="bg-info text-primary"><strong><em>{{ data.data[i] }}</em></strong></td>
+                        </tr>
                     {% else %}
                         <tr>
                             <th>{{ data.header[i] }}</th>

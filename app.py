@@ -20,7 +20,7 @@ class NameForm(Form):
     zjhm = StringField(u'证件号码(身份证/军官证)', validators=[DataRequired()])
     ksbh = StringField(u'考生编号', validators=[DataRequired()])
 
-    submit = SubmitField(u'查询成绩')
+    submit = SubmitField(u'查询复试及拟录取情况')
 
     pass
 
