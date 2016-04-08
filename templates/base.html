@@ -1,13 +1,37 @@
 {% extends "bootstrap/base.html" %}
 
-{% block title %}研究生入学考试成绩查询{% endblock %}
+{% block title %}云南大学2016年硕士研究生入学考试拟录取信息查询系统{% endblock %}
+
+{% block head %}
+{{super()}}
+<link rel="shortcut icon" href="../static/favicon.ico">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?aafd45b1ccc763575acf17846231ba92";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<style>
+body {
+  color: whitesmoke;
+  background: url("/static/images/greenleaf.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
+{% endblock %}
 
 {% block navbar %}
     <div class="navbar navbar-inverse" role="navigation">
         <div class="container">
 
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">硕士研究生入学考试成绩查询</a>
+                <a class="navbar-brand" href="/">硕士研究生入学考试拟录取信息查询系统</a>
             </div>
 
             </div>
@@ -31,5 +55,6 @@
         <div class="container">
         </div>
     </div>
+
 {% endblock %}
 
