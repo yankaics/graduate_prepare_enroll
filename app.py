@@ -13,6 +13,7 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 import xlrd
 from pdb import set_trace
+import os
 
 # 表单类
 class NameForm(Form):
@@ -32,8 +33,8 @@ def toStringValue(cell):
 
 # 初始化
 def init():
-
-    data = xlrd.open_workbook('./data.xlsx')
+    current_path = os.path.dirname(os.path.realpath(__file__))
+    data = xlrd.open_workbook(current_path + './data.xlsx')
     table = data.sheets()[0]
 
     # 读取表头,存在风险:Excel当中表头只能有一行,并且只能是第0行
