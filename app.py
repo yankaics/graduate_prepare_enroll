@@ -34,7 +34,7 @@ def toStringValue(cell):
 # 初始化
 def init():
     current_path = os.path.dirname(os.path.realpath(__file__))
-    data = xlrd.open_workbook(current_path + './data.xlsx')
+    data = xlrd.open_workbook(os.path.join(current_path, 'data.xlsx'))
     table = data.sheets()[0]
 
     # 读取表头,存在风险:Excel当中表头只能有一行,并且只能是第0行
