@@ -1,6 +1,30 @@
 # python application for graduate_prepare_enroll
-app:
+graduate_prepare_enroll_1:
     image: ynuae/graduate_prepare_enroll
     ports:
-      - "50006:5000"
+      - "50031:5000"
+    restart: always
+
+graduate_prepare_enroll_2:
+    image: ynuae/graduate_prepare_enroll
+    ports:
+      - "50032:5000"
+    restart: always
+
+graduate_prepare_enroll_3:
+    image: ynuae/graduate_prepare_enroll
+    ports:
+      - "50033:5000"
+    restart: always
+
+graduate_prepare_enroll_4:
+    image: ynuae/graduate_prepare_enroll
+    ports:
+      - "50034:5000"
+    restart: always
+
+graduate_prepare_enroll_5:
+    image: ynuae/graduate_prepare_enroll
+    ports:
+      - "50035:5000"
     restart: always
